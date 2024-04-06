@@ -1,0 +1,17 @@
+package com.sathya.rest.repository;
+
+import java.time.LocalDateTime;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.sathya.rest.entity.Hospital;
+import com.sathya.rest.model.HospitalDetails;
+
+@Repository
+public interface HospitalRepository extends JpaRepository<Hospital, Long>{
+
+	public Hospital updateHospital(Hospital hospital);
+	
+
+}

@@ -1,0 +1,5 @@
+package com.sathya.rest.model;
+
+public class HospitalDetails {
+
+}

@@ -1,0 +1,5 @@
+package com.sathya.rest;
+
+public class Hospital {
+
+}

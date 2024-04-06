@@ -1,0 +1,28 @@
+package com.sathya.rest.repository;
+
+import java.time.LocalDateTime;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.sathya.rest.entity.Hospital;
+import com.sathya.rest.model.HospitalDetails;
+
+@Repository
+public interface HospitalRepository extends JpaRepository<Hospital, Long>{
+
+	public Hospital updateHospital(Hospital hospital)
+	{
+		Hospital updatedHospital = new Hospital();
+		updatedHospital.setId(hospital.getId());
+		updatedHospital.setName(hospital.getName());
+		updatedHospital.setLocation(hospital.getLocation());
+		updatedHospital.setRating(hospital.getRating());
+		updatedHospital.setCreatedAt(LocalDateTime.now());
+		updatedHospital.setCreatedBy(System.getProperty("user.name"));
+		
+		return updatedHospital;
+	}
+	
+
+}
